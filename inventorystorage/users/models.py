@@ -11,5 +11,9 @@ class User(models.Model):
     )
     first_name = models.TextField()
     last_name = models.TextField()
+
+    email = models.TextField()
+    phone = models.TextField()
+
     login = models.TextField()
     password = models.TextField()

@@ -10,7 +10,7 @@ def get_return_time():
 
 class M2mInventoryToUser(models.Model):
     class Meta:
-        db_table = 'm2m_geo_buildings_contractors'
+        db_table = 'm2m_inventory_to_user'
 
     item_id = models.AutoField(
         db_column='info_id',
