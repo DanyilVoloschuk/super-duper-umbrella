@@ -3,7 +3,7 @@ import time
 from django.db import models
 
 
-def get_return_time(self):
+def get_return_time():
     # 1209600 is 2 weeks
     return time.time() + 1209600
 
