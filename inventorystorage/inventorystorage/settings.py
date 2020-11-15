@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'inventory_list'
+    'inventory_list',
+    'users',
 ]
 
 REST_FRAMEWORK = {
