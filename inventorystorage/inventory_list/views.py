@@ -5,13 +5,21 @@ from rest_framework.views import APIView
 class InventoryList(APIView):
 
     def get(self, request):
-        return Response({})
+        response = {}
+        data = request.GET
+        return Response(response)
 
     def post(self, request):
-        return Response({})
+        response = {}
+        data = request.data
+        return Response(response)
 
     def patch(self, request):
-        return Response({})
+        response = {}
+        data = request.data
+        return Response(response)
 
     def put(self, request):
-        return Response
+        response = {}
+        data = request.data
+        return Response(response)
