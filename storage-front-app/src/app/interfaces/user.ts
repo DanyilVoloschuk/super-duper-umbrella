@@ -9,5 +9,5 @@ export interface User {
   phone: string,
   login: string,
   password: string,
-  items: Good
+  items: Good[]
 }

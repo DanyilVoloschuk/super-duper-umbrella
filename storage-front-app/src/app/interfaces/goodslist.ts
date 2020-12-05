@@ -4,7 +4,7 @@ export interface Good {
   item_id: bigint,
   created: bigint,
   name: string,
-  discription: string,
+  description: string,
   belongs_to: User[],
   photo_set: Photo[]
 }

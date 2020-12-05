@@ -1,0 +1,97 @@
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+mat-toolbar {
+  background-color: rgba(52, 128, 128, 0.55);
+}
+
+mat-button {
+}
+
+mat-card {
+  width: 88%;
+  max-width: 400px;
+  margin: 5px;
+  background-color: rgba(52, 128, 128, 0.55);
+  display: inline-block;
+}
+
+mat-card-image {
+  max-height: 300px;
+  max-width: 400px;
+}
+
+.main-text {
+  text-align: center
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.font-chilanka {
+  font-family: Chilanka;
+}
+
+.center {
+  text-align: center;
+}
+
+.to-left-side {
+  text-align: left
+}
+
+.ordered {
+  color: white;
+  background-color: darkred;
+}
+
+.p8 {
+  padding: 8px;
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+
+.pl8{
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.ptb4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.m4 {
+  margin: 4px;
+}
+
+.mt4 {
+  margin-top: 4px;
+}
+
+.border-1px-black {
+  border: 1px solid black;
+}
+
+.border-radius-5px {
+  border-radius: 5px;
+}
+
+.main-bgcolor {
+  background-color: rgba(52, 128, 128, 0.55);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.width-300px {
+  width: 300px;
+}
+

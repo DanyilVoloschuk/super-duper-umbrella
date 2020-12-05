@@ -1,6 +1,9 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from inventory_list.models import Item
+from inventory_list.serializers import ItemsSerializer
+
 
 class InventoryView(APIView):
 
@@ -32,6 +35,9 @@ class InventoryList(APIView):
     def get(self, request):
         response = {}
         data = request.GET
+        items = Item.objects.filter()
+        serializer = ItemsSerializer(items, many=True)
+        response = serializer.data
         return Response(response)
 
     def post(self, request):

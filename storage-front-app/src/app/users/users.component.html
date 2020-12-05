@@ -1,0 +1,23 @@
+<div class="main-bgcolor font-chilanka mt4 center">
+  <h2>Користувачі</h2>
+</div>
+<div class=" m4  border-radius-5px border-1px-black main-bgcolor width-300px"
+     style="display: inline-block"
+     *ngFor="let user of users">
+  <div class="p8 font-chilanka center">{{user.first_name}} {{user.last_name}}</div>
+  <mat-divider></mat-divider>
+  <div class="pl4 font-chilanka">Taken items</div>
+  <div class="mt4 pl4 bg-white">
+    <div *ngFor="let good of user.items">
+      <span>{{good.name}}; </span>
+    </div>
+    <div *ngIf="!user.items.length">Ці очі не бачили як ці руки крали</div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="mt4 pl4 font-chilanka">
+    <div>Contacts</div>
+    <div>email: {{user.email}}</div>
+    <div>phone: {{user.phone}}</div>
+  </div>
+</div>
+<!-- *ngFor="let user of users" -->

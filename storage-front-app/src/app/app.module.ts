@@ -9,12 +9,18 @@ import {RouterModule} from '@angular/router';
 import {PersonalPageComponent} from './personal-page/personal-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
+import { UsersComponent } from './users/users.component';
+import {MatListModule} from '@angular/material/list';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
     GoodslistComponent,
     PersonalPageComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,11 +29,18 @@ import { MatSliderModule } from '@angular/material/slider';
     RouterModule.forRoot([
       {path: '', redirectTo: 'goods-list', pathMatch: 'full'},
       {path: 'goods-list', component: GoodslistComponent},
-      {path: 'user/:id', component: PersonalPageComponent, pathMatch: 'full'},
+      {path: 'users', component: UsersComponent},
+      {path: 'user/:id', component: UsersComponent, pathMatch: 'full'},
     ]),
-    MatSliderModule
+    MatToolbarModule,
+    MatSliderModule,
+    MatCardModule,
+    MatListModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -7,11 +7,14 @@ from users.models import User
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('item_id', 'created', 'first_name', 'last_name', 'login', 'password', 'items')
+        fields = ('item_id', 'created', 'first_name', 'last_name', 'login', 'password', 'items', 'email', 'phone')
     item_id = serializers.IntegerField()
     created = serializers.IntegerField()
     first_name = serializers.CharField()
     last_name = serializers.CharField()
     login = serializers.CharField()
     password = serializers.CharField()
-    items = LiteItemsSerializer()
+    items = LiteItemsSerializer(many=True)
+    email = serializers.CharField()
+    phone = serializers.CharField()
+

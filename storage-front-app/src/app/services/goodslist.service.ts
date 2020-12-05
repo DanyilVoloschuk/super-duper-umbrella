@@ -13,8 +13,8 @@ export class GoodslistService {
 
   private ip = 'http://127.0.0.1:8000/';
 
-  getGoods (): Observable<Good[]>{
-    return this.http.get<Good[]>(this.ip + 'goods/')
+  getGoods (): Observable<any>{
+    return this.http.get<any>(this.ip + 'goods/')
   }
 
   setGoods (goods: Good[]){

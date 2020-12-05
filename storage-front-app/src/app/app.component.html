@@ -6,23 +6,18 @@
     <title></title>
   </head>
   <body>
-<!--      <mat-toolbar>-->
-<!--        <a [routerLink]="['/scouts']"  class="font-chilanka">-->
-<!--          <span>EScout</span>-->
-<!--        </a>-->
-<!--        <a [routerLink]="['/my_page']" >-->
-<!--          <button mat-button class="font-chilanka">My Page</button>-->
-<!--        </a>-->
-<!--        <a [routerLink]="['/badges']" >-->
-<!--          <button mat-button class="font-chilanka">All badges</button>-->
-<!--        </a>-->
-<!--        <a [routerLink]="['/login']">-->
-<!--          <button mat-button class="font-chilanka">Login</button>-->
-<!--        </a>-->
-<!--        <a [routerLink]="['/register']" >-->
-<!--          <button mat-button class="font-chilanka">Register</button>-->
-<!--        </a>-->
-<!--      </mat-toolbar>-->
-<!--      <router-outlet ></router-outlet>-->
+    <div>
+        <mat-toolbar>
+          <a [routerLink]="['/goods-list']"  class="font-chilanka">
+            <button mat-button class="font-chilanka">Цінності</button>
+          </a>
+          <a [routerLink]="['/users']" >
+            <button mat-button class="font-chilanka">Користувачі</button>
+          </a>
+        </mat-toolbar>
+    </div>
+    <div>
+      <router-outlet ></router-outlet>
+    </div>
   </body>
 </html>
