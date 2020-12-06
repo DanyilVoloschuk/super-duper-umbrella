@@ -17,3 +17,10 @@ class User(models.Model):
 
     login = models.TextField()
     password = models.TextField()
+
+    def __str__(self):
+        return f'{self.last_name} {self.first_name} <id:{self.item_id}>'
+
+    class Meta:
+        verbose_name_plural = 'Користувачі'
+        verbose_name = 'Користувач'

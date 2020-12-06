@@ -9,7 +9,7 @@
   <div class="pl4 font-chilanka">Taken items</div>
   <div class="mt4 pl4 bg-white">
     <div *ngFor="let good of user.items">
-      <span>{{good.name}}; </span>
+      <p>{{good.name}} <small>[дату повернення дізнайтесь у адміністратора]</small>;</p>
     </div>
     <div *ngIf="!user.items.length">Ці очі не бачили як ці руки крали</div>
   </div>
@@ -20,4 +20,3 @@
     <div>phone: {{user.phone}}</div>
   </div>
 </div>
-<!-- *ngFor="let user of users" -->

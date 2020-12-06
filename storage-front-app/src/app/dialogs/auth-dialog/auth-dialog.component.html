@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Аби взяти {{good.name}} введіть логін та пароль</h2>
+<form [formGroup]="loginForm" (ngSubmit)="commitOrdering()">
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field class="example-form-field">
+      <mat-label>
+        Login
+      </mat-label>
+      <input matInput (ngModelChange)="errors=''" type="text" formControlName="login" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-form-field">
+      <mat-label>
+        Password
+      </mat-label>
+      <input matInput (ngModelChange)="errors=''" type="text" formControlName="password" required>
+
+    </mat-form-field>
+    <br>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <span *ngIf="errors" style="color: red">{{errors}}</span>
+    <button mat-button (click)="onClose()">Cancel</button>
+    <button [disabled]="!loginForm.valid || disable"
+            class="font-chilanka"
+            mat-button
+            type="submit">
+      Log in
+    </button>
+  </mat-dialog-actions>
+</form>

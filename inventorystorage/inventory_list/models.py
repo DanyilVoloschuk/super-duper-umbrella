@@ -15,12 +15,15 @@ class M2mInventoryToUser(models.Model):
     item_id = models.AutoField(
         db_column='info_id',
         primary_key=True)
-    # do nothing cause we may need to get history of item
+
     inventory = models.ForeignKey('Item', on_delete=models.DO_NOTHING)
     user = models.ForeignKey('users.User', on_delete=models.DO_NOTHING)
     is_returned = models.BooleanField(default=False)
-    return_time = models.BigIntegerField()
+    return_time = models.BigIntegerField(default=0)
     has_to_be_returned = models.BigIntegerField(default=get_return_time)
+
+    def __str__(self):
+        return f'{self.inventory.name} у {self.user.last_name} {self.user.first_name}'
 
 
 class Item(models.Model):
@@ -40,6 +43,9 @@ class Item(models.Model):
         related_name='items'
     )
 
+    def __str__(self):
+        return f'{self.name} <id:{self.item_id}>'
+
 
 class Photo(models.Model):
     item_id = models.AutoField(
@@ -49,3 +55,6 @@ class Photo(models.Model):
     )
     data = models.TextField()
     inventory = models.ForeignKey(Item, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Фотка номер {self.item_id} цінності {self.inventory}'
